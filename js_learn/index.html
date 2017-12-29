@@ -2,44 +2,62 @@
   <meta charset="utf-8" />
   <title>UOBBF test project</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet" type="text/css">
-  <link type="text/css" rel="stylesheet" href="styles\styles.css" />
+  !-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-navbar-sidebar/dist/css/navbar-fixed-left.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-navbar-sidebar/dist/css/navbar-fixed-right.min.css">
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="styles\styles.css">
+
   <!--  <img class="logo" src="images\logo_uob_new.jpg" align="left"/> -->
 </head>
 
 <body>
-  <div style="width: 100%;overflow:auto;">
-    <div style="float:right; width: 90%;" id="r_block" class="r_side">
-      <header>
-        <h1 style="text-align:center;" class='w_head'>Welcome to UOBBF Intranet</h1>
-      </header>
-    </div>
-    <div style="float:left; width: 10%" id="l_block" class="l_side">
-      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Loaders</span>
-      <div id="s_menu" class="l_sidemenu">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="a_loaders">
-          <a href="l_loaders">Loaders</a>
-          <div class="t_load">
-            <button class="t_load_btn">Trade
-              <i class="t_load_btn_dwn"></i>
-            </button>
-            <a href="s_trades">Stage Load</a>
-            <a href="l_trades">Load Trades</a>
-            <a href="v_trades">View Loaded Trades</a>
-          </div>
-
-          <div class="fee_load">
-            <button class="f_load_btn">Misc. Fee
-              <i class="f_load_btn_dwn"></i>
-            </button>
-            <a href="s_fee">Stage Load</a>
-            <a href="l_fee">Load Trades</a>
-            <a href="v_fee">View Loaded Trades</a>
-          </div>
-        </div>
+  <nav class="navbar navbar-inverse navbar-fixed-left">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Loaders</a>
+      </div>
+      <div id="l_block" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Trade Loader<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Stage Load</a></li>
+              <li><a href="#">Load Trades</a></li>
+            </ul>
+          </li>
+          <li><a href="#">View Loaded Trades</a></li>
+          <li role="separator" class="divider"></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Misc Fee<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Stage Load</a></li>
+              <li><a href="#">Load Fee</a></li>
+            </ul>
+          </li>
+          <li><a href="#">View Loaded Fee</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-<div style="clear:both"></div>
+  </nav>
+
+  <div class="container">
+    <div id="r_block" class="jumbotron text-center">
+      <h1>Welcome to UOBBF Intranet</h1>
+      <p>
+        <strong>
+          This is my first bootstrap website experiment with UOBBF loader.
+        </strong>
+      </p>
+
+    </div>
+
   <script class="jsc" src="scripts\main.js"></script>
 </body>
